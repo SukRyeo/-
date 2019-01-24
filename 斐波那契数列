@@ -1,0 +1,32 @@
+'''
+def fab(max):
+    n,a,b=0,0,1
+    while n<max:
+        print(b)
+        a,b=b,a+b
+        n=n+1
+fab(5)
+
+def fab(max):
+    n,a,b=0,0,1
+    L=[]
+    while n<max:
+        L.append(b)
+        a,b=b,a+b
+        n=n+1
+    return L
+
+for n in fab(5):
+    print(n)
+'''
+
+#关键字yield输出斐波那契数列
+
+def fab(max):
+    n,a,b=0,0,1
+    while n<max:
+        yield b
+        a,b=b,a+b
+        n=n+1
+for n in fab(5):
+    print(n)
